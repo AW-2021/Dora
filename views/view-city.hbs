@@ -1,0 +1,50 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View City</li>
+  </ol>
+</nav>
+
+<div class="view-city p-5">
+  {{#each rows}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h4>Tourist Place ID: {{this.id}}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">City ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Number of Stars</th>
+            <th scope="col">Opening Time</th>
+            <th scope="col">Closing Time</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Price Per Person</th>
+            <th scope="col" class="text-end">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{this.city_id}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.stars}}</td>
+            <td>{{this.opening_time}}</td>
+            <td>{{this.closing_time}}</td>
+            <td>{{this.address}}</td>
+            <td>{{this.phone}}</td>
+            <td>{{this.price_per_person}}</td>
+            <td class="text-end">
+              <a href="/home/viewtouristplace/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i>View</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {{/each}}
+</div>
