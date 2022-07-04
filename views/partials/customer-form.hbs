@@ -1,0 +1,44 @@
+ <div class="col-6">
+      <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{user.username}}" placeholder="Username" name="username">
+      <label for="floatingInput">Username</label>
+    </div>
+  </div>
+
+   <div class="col-6">
+      <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingInput" value="{{user.password}}" placeholder="Password" name="password">
+      <label for="floatingInput">Password</label>
+    </div>
+  </div>
+
+   <div class="col-6">
+      <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{user.first_name}}" placeholder="First Name" name="first_name">
+      <label for="floatingInput">First Name</label>
+    </div>
+  </div>
+    <div class="col-6">
+      <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{user.last_name}}" placeholder="Last Name" name="last_name">
+      <label for="floatingInput">Last Name</label>
+    </div>
+  </div>  
+   <br />
+    <div class="col-6">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="email" class="form-control" id="floatingInput" value="{{this.email}}" placeholder="Email" name="email">
+        </div>
+    </div>
+    <br />
+    <div class="col-6">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon8">+20</span>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="Phone Number" name="phone" aria-label="phone"
+            aria-describedby="basic-addon9">
+        </div>
+    </div>  
+  <div class="col-12 d-grid">
+      <button class="btn btn-primary" type="submit">Submit</button>
+</div>

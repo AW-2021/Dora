@@ -1,0 +1,55 @@
+ <div class="col-6">
+      <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{registration.city_id}}" placeholder="City ID" name="city_id">
+      <label for="floatingInput">City ID</label>
+    </div>
+  </div>
+   <div class="col-6">
+      <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{registration.customer_id}}" placeholder="Customer ID" name="customer_id">
+      <label for="floatingInput">Customer ID</label>
+    </div>
+  </div>
+  <div class="input-group mb-3">
+          <label for="start_date" class="col-sm-1 col-form-label">Start Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="start_date"
+            value="{{registration.start_date}}"
+            placeholder="Arrival Date"
+            name="start_date"
+            aria-label="sdate"
+            aria-describedby="basic-addon5"
+            required/>
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon6">dd/mm/yyyy</span>
+          </div>
+  </div>
+  <div class="col-12">
+      <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" value="{{registration.preferred_stars}}" placeholder="Preferred Number of Stars" name="preferred_stars">
+      <label for="floatingInput">Preferred Number of Stars</label>
+    </div>
+  </div>
+
+  <div class="input-group mb-3">
+          <label for="end_date" class="col-sm-1 col-form-label">End Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="end_date"
+            value="{{registration.end_date}}"
+            placeholder="End Date"
+            name="end_date"
+            aria-label="edate"
+            aria-describedby="basic-addon5"
+            required/>
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon6">dd/mm/yyyy</span>
+          </div>
+        </div>
+  
+  <div class="col-12 d-grid">
+      <button class="btn btn-primary" type="submit">Submit</button>
+</div>
