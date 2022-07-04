@@ -1,0 +1,47 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Customers</li>
+  </ol>
+</nav>
+
+{{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  User has been removed.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+  <div class="row">
+    <div class="col-11" style = "position:relative; left:12px; top:550px; background-color:rgb(192, 192, 192);">YOUR TRIPS</div> 
+</div>
+
+  <table class="table table-bordered">
+  <br>
+    <thead class="thead-dark">
+  <br>
+    <tr>
+  <br>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Join Date & Time</th>
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <br>
+  <tbody>
+  <br>
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.username}}</td>
+      <td>{{this.join_date}}</td>
+      <td class="text-end">
+        <a href="/home/viewtrip/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
+        <a href="/home/edituser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Edit</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
