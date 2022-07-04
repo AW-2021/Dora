@@ -1,0 +1,32 @@
+<div class="view-city p-5">
+  {{#each rows}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h4>Attraction ID: {{this.id}}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Tourist Place ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Duration</th>
+            <th scope="col">About</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.duration}}</td>
+            <td>{{this.about}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {{/each}}
+</div>
+ 
