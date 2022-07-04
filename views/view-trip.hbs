@@ -1,0 +1,50 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item"><a href="/home/viewcustomer">Customer</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View Trips</li>
+  </ol>
+</nav>
+
+<div class="view-trip p-5">
+<div class="row mb-5">
+  <div class="col text-left">
+    <h1>Customer's Trip Info</h1>
+  </div>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">City ID</th>
+      <th scope="col">Customer ID</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Preferred Stars</th>
+      <th scope="col">Tourist Place ID</th>
+      <th scope="col">Tourist Place City ID</th>
+      <th scope="col">Tourist Place Name</th>
+      <th scope="col">Tourist Place Stars</th>
+      <th scope="col">Tourist Place Trip date</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.RegID}}</th>
+      <td>{{this.city_id}}</td>
+      <td>{{this.customer_id}}</td>
+      <td>{{this.start_date}}</td>
+      <td>{{this.end_date}}</td>
+      <td>{{this.preferred_stars}}</td>
+      <td>{{this.tourist_placesID}}</td>
+      <td>{{this.tourist_placesCityID}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.stars}}</td>
+      <td>{{this.tripdate}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+ 
