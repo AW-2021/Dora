@@ -1,0 +1,34 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item"><a href="/home/viewcity">View City</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View Tourist Place</li>
+  </ol>
+</nav>
+
+<div class="view-touristplace p-5">
+  {{#each rows}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h4>Tourist Place ID: {{this.ID}}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">{{this.AttractionID}}</th>
+            <th scope="row">{{this.RestaurantID}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.duration}}</td>
+            <td>{{this.about}}</td>
+            <td>{{this.cuisine_type}}</td>
+            <td>{{this.capacity}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {{/each}}
+</div>
